@@ -18,7 +18,7 @@ However, after several months, operators suspect the system may actually be expe
 
 You collect the following observed pressure readings (psi):
 
-see `data/raw/pressure_readings.csv` for data.
+see `data/raw/pressure_sensor_readings.csv` for data.
 
 Your task is to investigate whether the system still appears consistent with the original assumptions.
 
