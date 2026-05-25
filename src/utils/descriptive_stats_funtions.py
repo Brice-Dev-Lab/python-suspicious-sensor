@@ -44,10 +44,12 @@ def dataset_diagnostics(df: pd.DataFrame) -> dict:
             DataFrame containing pressure sensor readings.
     Return
     ------
-        shape
-        data_type
-        memory_usage
-        unique_values
+        Results
+            Dictionary with the following keys:
+                shape - tuple with the shape of the dataset
+                data_type - dictionary with column names as keys and data types as values
+                memory_usage - how much RAM the dataset consumes
+                unique_values - count of unique values
 
     Raises
     ------
