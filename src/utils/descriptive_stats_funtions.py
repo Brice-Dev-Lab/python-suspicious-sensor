@@ -33,3 +33,18 @@ def load_data(filename: str) -> pd.DataFrame:
 
     df: pd.DataFrame = pd.read_csv(path)
     return df
+
+def dataset_inspection(df: pd.DataFrame) -> dict:
+    """
+    Ingests DataFrame and performs dataset inspections, then returns findings in a dictionary
+
+    Args
+    ----
+    Return
+    ------
+    Raises
+    ------
+    Notes
+    -----
+    """
+    pass

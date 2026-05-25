@@ -12,7 +12,7 @@ This document defines the steps and strategy to be used and implemented to compl
 - The functions used to perform the analysis will be in the `src/utils/` folder.
 
 ### Utility Functions
-- Download Data
+- Load Data
 - Dataset Inspection
   - Shape
   - Data Type
