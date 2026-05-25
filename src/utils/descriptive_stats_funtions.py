@@ -34,14 +34,44 @@ def load_data(filename: str) -> pd.DataFrame:
     df: pd.DataFrame = pd.read_csv(path)
     return df
 
-def dataset_inspection(df: pd.DataFrame) -> dict:
+def dataset_diagnostics(df: pd.DataFrame) -> dict:
     """
-    Ingests DataFrame and performs dataset inspections, then returns findings in a dictionary
+    Ingests DataFrame and performs dataset diagnostics, then returns findings in a dictionary
 
     Args
     ----
+        df (pd.DataFrame):
+            DataFrame containing pressure sensor readings.
     Return
     ------
+        shape
+        data_type
+        memory_usage
+        unique_values
+
+    Raises
+    ------
+    Notes
+    -----
+    """
+    pass
+
+
+def dataset_validation(df: pd.DataFrame) -> dict:
+    """
+    Ingests DataFrame and performs dataset validation, then returns findings in a dictionary
+
+    Args
+    ----
+        df (pd.DataFrame):
+            DataFrame containing pressure sensor readings.
+    Return
+    ------
+        structure
+        data_type
+        value_range
+        timestamp_validation
+
     Raises
     ------
     Notes
