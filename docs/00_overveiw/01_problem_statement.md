@@ -16,7 +16,7 @@ The engineers believe the pressure fluctuations follow a normal distribution:
 
 However, after several months, operators suspect the system may actually be experiencing abnormal pressure instability.
 
-You collect the following observed pressure readings (psi):
+Operational pressure telemetry is collected over an extended monitoring period for further analysis.
 
 see `data/raw/pressure_sensor_readings.csv` for data.
 
