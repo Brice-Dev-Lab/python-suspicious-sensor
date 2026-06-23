@@ -13,10 +13,10 @@ structure and utility component strategy.
 - [ ] `load_data()` unit test written and passing
 
 ### Dataset Diagnostics (`dataset_diagnostics()`)
-- [ ] Implement shape reporting
-- [ ] Implement data type inspection
-- [ ] Implement memory usage reporting
-- [ ] Implement unique value counts for categorical columns (`sensor_status`, `pump_status`, `anomaly_flag`)
+- [x] Implement shape reporting
+- [x] Implement data type inspection
+- [x] Implement memory usage reporting
+- [x] Implement unique value counts for categorical columns (`sensor_status`, `pump_status`, `anomaly_flag`)
 - [ ] Unit test written and passing
 
 ### Dataset Validation (`dataset_validation()`)
