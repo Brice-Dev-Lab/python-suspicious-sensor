@@ -7,7 +7,7 @@ from pathlib import Path
 # -----------------------
 # Standardize Path Setup
 # -----------------------
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
 DATA_PATH = PROJECT_ROOT / "data" / "raw"
 
 # -------------------------
@@ -56,7 +56,17 @@ def dataset_diagnostics(df: pd.DataFrame) -> dict:
     Notes
     -----
     """
-    pass
+    shape = df.shape
+    data_types = df.dtypes
+    memory_usage = df.memory_usage(deep=True).sum() / 1024**2
+    unique_values = df.nunique().to_dict()
+    diagnostic_results = {
+        "shape": shape,
+        "data_types": data_types,
+        "memory_usage": memory_usage,
+        "unique_values": unique_values
+    }
+    return diagnostic_results
 
 
 def dataset_validation(df: pd.DataFrame) -> dict:
