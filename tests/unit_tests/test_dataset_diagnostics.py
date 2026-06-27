@@ -16,13 +16,20 @@ def test_dataset_diagnostics_contains_expected_keys():
     result_keys_set = set(result.keys())
     assert expected_keys == result_keys_set
 
-def test_dataset_diagnostics_shape_returns_tuple():
-    """Tests whether the shape returns a value in a tuple."""
-    pass
+def test_dataset_diagnostics_shape_returns_df_shape():
+    """Tests that dataset_diagnostics returns the correct DataFrame shape."""
+    df = load_data("pressure_sensor_readings.csv")
+    result = dataset_diagnostics(df)
+    shape = result['shape']
+    assert shape == df.shape
 
 def test_dataset_diagnostics_returns_dtypes():
     """Tests whether columns return dtypes."""
-    pass
+    df = load_data("pressure_sensor_readings.csv")
+    result = dataset_diagnostics(df)
+    actual_dtypes = result['data_typs']
+    expected_dtypes = 
+    assert result['data_types']
 
 def test_dataset_diagnostics_memory_float_greater_than_zero():
     """Tests that the memory was returned as a float and a positive number."""
