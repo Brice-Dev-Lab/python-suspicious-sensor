@@ -15,3 +15,5 @@ def test_load_data_filename_type(filename):
 
 def test_load_data_file_not_found():
     """Test that checks the error handling for a missing data file."""
+    with pytest.raises(FileNotFoundError):
+        load_data("this_file_should_not_exist.csv")
