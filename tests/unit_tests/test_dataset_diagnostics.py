@@ -1,9 +1,11 @@
-
+from src.suspicious_sensor.utils.descriptive_stats_functions import dataset_diagnostics, load_data
 
 
 def test_dataset_diagnostics_returns_dictionary():
-    """Tests whether dataset diagnotics returns a dictionary."""
-    pass
+    """Tests whether dataset diagnostics returns a dictionary."""
+    df = load_data("pressure_sensor_readings.csv")
+    result = dataset_diagnostics(df)
+    assert isinstance(result, dict)
 
 def test_dataset_diagnostics_contains_expected_keys():
     """Tests whether the correct keys are returned."""
