@@ -1,4 +1,4 @@
-from src.suspicious_sensor.utils.descriptive_stats_functions import load_data
+from src.suspicious_sensor.io.loader import load_data
 import pandas as pd
 import pytest
 

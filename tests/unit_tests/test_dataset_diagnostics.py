@@ -1,4 +1,5 @@
-from src.suspicious_sensor.utils.descriptive_stats_functions import dataset_diagnostics, load_data
+from src.suspicious_sensor.io.loader import load_data
+from src.suspicious_sensor.diagnostics.diagnostics import dataset_diagnostics
 
 
 def test_dataset_diagnostics_returns_dictionary():
