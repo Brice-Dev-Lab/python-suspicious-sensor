@@ -9,7 +9,11 @@ def test_dataset_diagnostics_returns_dictionary():
 
 def test_dataset_diagnostics_contains_expected_keys():
     """Tests whether the correct keys are returned."""
-    pass
+    df = load_data("pressure_sensor_readings.csv")
+    result = dataset_diagnostics(df)
+    expected_keys = {'shape', 'data_types', 'memory_usage', 'unique_values'}
+    result_keys_set = set(result.keys())
+    assert expected_keys == result_keys_set
 
 def test_dataset_diagnostics_shape_returns_tuple():
     """Tests whether the shape returns a value in a tuple."""
