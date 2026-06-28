@@ -23,13 +23,19 @@ def test_dataset_diagnostics_shape_returns_df_shape():
     shape = result['shape']
     assert shape == df.shape
 
+
 def test_dataset_diagnostics_returns_dtypes():
     """Tests whether columns return dtypes."""
     df = load_data("pressure_sensor_readings.csv")
     result = dataset_diagnostics(df)
-    actual_dtypes = result['data_typs']
-    # expected_dtypes =
-    assert result['data_types']
+    actual_dtypes = result['data_types']
+    expected_dtypes = df.dtypes
+    assert actual_dtypes.equals(expected_dtypes)
+    # .dtypes returns a pandas Series.
+    # Comparing two Series with == produces another Series of booleans,
+    # not a single True/False value.
+    # Series.equals() returns a single boolean indicating whether
+    # the Series have the same values and indices.
 
 def test_dataset_diagnostics_memory_float_greater_than_zero():
     """Tests that the memory was returned as a float and a positive number."""
