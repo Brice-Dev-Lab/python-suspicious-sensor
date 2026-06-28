@@ -49,22 +49,29 @@ suspicious_sensor/
 │       ├── diagnostics/
 │       │   ├── __init__.py                # Package marker
 │       │   ├── diagnostics.py             # dataset_diagnostics(df) — shape, dtypes, memory, unique values
+│       │   ├── cleaning.py 
 │       │   └── validation.py              # dataset_validation(df) — stub
 │       │
 │       ├── preprocessing/
 │       │   └── __init__.py                # Package marker (planned)
 │       │
 │       ├── statistics/
-│       │   └── __init__.py                # Package marker (planned)
+│       │   ├── __init__.py                # Package marker (planned)
+│       │   ├── descriptive.py
+│       │   ├── probability.py
+│       │   └── z_scores.py
 │       │
 │       ├── models/
 │       │   └── __init__.py                # Package marker (planned)
 │       │
 │       ├── simulation/
-│       │   └── __init__.py                # Package marker (planned)
+│       │   ├── __init__.py                # Package marker (planned)
+│       │   └── monte_carlo.py
 │       │
 │       └── visualization/
-│           └── __init__.py                # Package marker (planned)
+│           ├── __init__.py                # Package marker (planned)
+│           ├── distributions.py
+│           └── time_series.py
 │
 └── tests/
     ├── __init__.py                        # Test package marker

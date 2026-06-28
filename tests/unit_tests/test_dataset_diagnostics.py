@@ -28,7 +28,7 @@ def test_dataset_diagnostics_returns_dtypes():
     df = load_data("pressure_sensor_readings.csv")
     result = dataset_diagnostics(df)
     actual_dtypes = result['data_typs']
-    expected_dtypes = 
+    # expected_dtypes =
     assert result['data_types']
 
 def test_dataset_diagnostics_memory_float_greater_than_zero():
