@@ -42,7 +42,11 @@ def test_dataset_diagnostics_memory_float_greater_than_zero():
 
 def test_dataset_diagnostics_reports_unique_values():
     """Tests that unique values are reported."""
-    pass
+    df = load_data("pressure_sensor_readings.csv")
+    result = dataset_diagnostics(df)
+    actual_unique = result["unique_values"]
+    expected_unique = df.nunique().to_dict()
+    assert actual_unique == expected_unique
 
 def test_dataset_diagnostics_empty_dataframe():
     pass
