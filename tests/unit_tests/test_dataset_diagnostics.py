@@ -27,13 +27,18 @@ def test_dataset_diagnostics_returns_dtypes():
     """Tests whether columns return dtypes."""
     df = load_data("pressure_sensor_readings.csv")
     result = dataset_diagnostics(df)
-    actual_dtypes = result['data_typs']
-    # expected_dtypes =
-    assert result['data_types']
+    actual_dtypes = result['data_types']
+    expected_dtypes = df.dtypes
+    assert actual_dtypes.equals(expected_dtypes)
 
 def test_dataset_diagnostics_memory_float_greater_than_zero():
     """Tests that the memory was returned as a float and a positive number."""
-    pass
+    df = load_data("pressure_sensor_readings.csv")
+    result = dataset_diagnostics(df)
+    memory = result['memory_usage']
+    assert memory > 0
+
+
 
 def test_dataset_diagnostics_reports_unique_values():
     """Tests that unique values are reported."""
