@@ -27,7 +27,9 @@ def dataset_diagnostics(df: pd.DataFrame) -> dict:
     -----
     """
     if not isinstance(df, pd.DataFrame):
-        raise TypeError("Input must be a pandas DataFrame.")
+        raise TypeError(
+            f"Expected pandas DataFrame, got {type(df).__name__}."
+        )
 
     shape = df.shape
     data_types = df.dtypes
