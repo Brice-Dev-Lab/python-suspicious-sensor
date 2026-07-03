@@ -1,5 +1,8 @@
 from src.suspicious_sensor.io.loader import load_data
 from src.suspicious_sensor.diagnostics.diagnostics import dataset_diagnostics
+import pandas as pd
+import pytest
+
 
 
 def test_dataset_diagnostics_returns_dictionary():
@@ -38,8 +41,6 @@ def test_dataset_diagnostics_memory_float_greater_than_zero():
     memory = result['memory_usage']
     assert memory > 0
 
-
-
 def test_dataset_diagnostics_reports_unique_values():
     """Tests that unique values are reported."""
     df = load_data("pressure_sensor_readings.csv")
@@ -49,7 +50,11 @@ def test_dataset_diagnostics_reports_unique_values():
     assert actual_unique == expected_unique
 
 def test_dataset_diagnostics_empty_dataframe():
-    pass
+    """Test that the dataframe contains data."""
+    df = load_data("pressure_sensor_readings.csv")
+    assert not df.empty
 
 def test_dataset_diagnostics_invalid_input():
-    pass
+    """Test for invalid input."""
+    with pytest.raises(TypeError):
+        dataset_diagnostics("hello")
