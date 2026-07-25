@@ -26,6 +26,11 @@ def dataset_diagnostics(df: pd.DataFrame) -> dict:
     Notes
     -----
     """
+    if not isinstance(df, pd.DataFrame):
+        raise TypeError(
+            f"Expected pandas DataFrame, got {type(df).__name__}."
+        )
+
     shape = df.shape
     data_types = df.dtypes
     memory_usage = df.memory_usage(deep=True).sum() / 1024**2
